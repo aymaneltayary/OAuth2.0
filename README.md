@@ -18,9 +18,18 @@ MYSQL DB running locally
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+The application can connect to any MYSQL DB running on any host but you can create the DB locally . MySQL can be downloaded from https://dev.mysql.com/downloads/mysql/
 
-Say what the step will be
+Execute the SQL file attached with the repository , the file is db.sql
+
+From eclipse clone the repository  https://github.com/aymaneltayary/OAuth2.0.git into your workspace
+
+After repsository clone import the project into your workspace
+
+click on oauth-srv --> maven--> update project . You could need to check force update option
+
+
+
 
 ```
 Give the example
