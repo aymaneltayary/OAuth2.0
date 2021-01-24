@@ -19,7 +19,8 @@ MYSQL DB running locally
 
 ```
 
-### Installing
+### Prerequisites
+
 
 
 Execute the SQL file attached with the repository , the file is db.sql
