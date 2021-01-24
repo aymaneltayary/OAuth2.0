@@ -1,5 +1,5 @@
 FROM openjdk:11
-MAINTAINER David Flemström <dflemstr@spotify.com>
+MAINTAINER aeltayary@dxc.com
 
 VOLUME /tmp
 

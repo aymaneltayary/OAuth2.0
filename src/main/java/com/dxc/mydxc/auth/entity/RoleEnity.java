@@ -10,8 +10,8 @@ import java.sql.Timestamp;
  * 
  */
 @Entity
-@Table(name="roles")
-@NamedQuery(name="Role.findAll", query="SELECT r FROM RoleEnity r")
+@Table(name="role")
+@NamedQuery(name="Rol.findAll", query="SELECT r FROM RoleEnity r")
 public class RoleEnity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
