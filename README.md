@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-MYSQL DB running 
+MYSQL DB running locally
 
 JDK 8 or higher version
 
@@ -28,6 +28,8 @@ From eclipse clone the repository  https://github.com/aymaneltayary/OAuth2.0.git
 After repsository clone import the project into your workspace
 
 click on oauth-srv --> maven--> update project . You could need to check force update option
+
+click on oauth-srv -- run Spring Boot App or Java Application
 
 
 
@@ -84,9 +86,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+aeltayary@dxc.com
+Ayman.eltayary@dxc.com
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
