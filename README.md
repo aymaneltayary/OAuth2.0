@@ -1,6 +1,6 @@
-# OAuth 2
+# OAuth 2.0
 
-One Paragraph of project description goes here
+Spring Security OAuth2 Boot simplifies standing up an OAuth 2.0 Authorization Server.
 
 ## Getting Started
 
