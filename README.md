@@ -15,7 +15,7 @@ JDK 8 or higher version
 
 Java IDE for example eclipse
 
-MYSQL DB running locally
+Port 9999 is available on your machine
 
 
 
@@ -49,12 +49,16 @@ http://localhost:9999/oauth/check_token
 
 http://localhost:9999/oauth/token_key
 
+Also , the full details of these request are availabe in oauth2.postman_collection.json included 
+
 
 
 ## Deployment
 
 This app can be deployed locally
-This app can be deployed using docker see the included dockerfile
+This app can be deployed as an image on docker hub through:
+com.spotify maven dependency
+Dockerfile included 
 
 ## Built With
 
