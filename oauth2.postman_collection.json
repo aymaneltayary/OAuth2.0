@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "f290b138-04f4-4816-a35c-89b60838658c",
+		"name": "oauth2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:9999/oauth/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "user1@dxc.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9999/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9999/oauth/token_key",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "user1@dxc.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzb3VyY2Utc2VydmVyLXJlc3QtYXBpIl0sInVzZXJfbmFtZSI6InVzZXIxQGR4Yy5jb20iLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTYxMTQ5MTQ4NiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9FTVBMT1lFRSJdLCJqdGkiOiJhZGViZmEzZi00MzNhLTRkNzktODRiNC0yODdiZWM1Y2UzMTIiLCJjbGllbnRfaWQiOiJ3ZWIifQ.cVEW8NQ-h-Tyz-x-zOKzrgkQ2_38d4_Tf0ViJwGzTpU",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9999/oauth/token_key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"oauth",
+						"token_key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9999/oauth/check_token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "user1@dxc.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzb3VyY2Utc2VydmVyLXJlc3QtYXBpIl0sInVzZXJfbmFtZSI6InVzZXIxQGR4Yy5jb20iLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTYxMTQ5MTQ4NiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9FTVBMT1lFRSJdLCJqdGkiOiJhZGViZmEzZi00MzNhLTRkNzktODRiNC0yODdiZWM1Y2UzMTIiLCJjbGllbnRfaWQiOiJ3ZWIifQ.cVEW8NQ-h-Tyz-x-zOKzrgkQ2_38d4_Tf0ViJwGzTpU",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9999/oauth/check_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"oauth",
+						"check_token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
