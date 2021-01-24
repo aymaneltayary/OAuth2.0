@@ -1,6 +1,7 @@
 # OAuth 2.0
 
-Spring Security OAuth2 Boot simplifies standing up an OAuth 2.0 Authorization Server.This is an Authorization Server project based on java spring boot and mysql DB . It is an application that issues tokens for authorization.
+Spring Security OAuth2 Boot simplifies standing up an OAuth 2.0 Authorization Server.This is an Authorization Server project based on java spring boot and mysql DB . This repository can be deployed as microservice and can be a part of any microservice architecture to give all other microservices the authorization required to access
+It is an application that issues tokens for authorization.
 
 ## Getting Started
 
@@ -32,43 +33,27 @@ click on oauth-srv --> maven--> update project . You could need to check force u
 click on oauth-srv -- run Spring Boot App or Java Application
 
 
-
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
-Explain how to run the automated tests for this system
+NA
 
-### Break down into end to end tests
+### Running the application
 
-Explain what these tests test and why
+Once application starts up the autorization server is now ready to give you a token based on you acccess credetials .
+Below are the URL expose by this microservice 
 
-```
-Give an example
-```
+http://localhost:9999/oauth/token
 
-### And coding style tests
+http://localhost:9999/oauth/check_token
 
-Explain what these tests test and why
+http://localhost:9999/oauth/token_key
 
-```
-Give an example
-```
+
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This app can be deployed locally
+This app can be deployed using docker see the included dockerfile
 
 ## Built With
 
