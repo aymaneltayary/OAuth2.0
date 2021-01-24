@@ -1,6 +1,6 @@
 # OAuth 2.0
 
-Spring Security OAuth2 Boot simplifies standing up an OAuth 2.0 Authorization Server.
+Spring Security OAuth2 Boot simplifies standing up an OAuth 2.0 Authorization Server.This is an Authorization Server project based on java spring boot and mysql DB . It is an application that issues tokens for authorization.
 
 ## Getting Started
 
@@ -8,10 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
+JDK 8 or higher version
+Java IDE for example eclipse
+MYSQL DB running locally
 ```
 
 ### Installing
