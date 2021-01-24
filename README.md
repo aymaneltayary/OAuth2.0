@@ -8,6 +8,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+MYSQL DB running 
+
 JDK 8 or higher version
 
 Java IDE for example eclipse
@@ -18,7 +20,6 @@ MYSQL DB running locally
 
 ### Installing
 
-The application can connect to any MYSQL DB running on any host but you can create the DB locally . MySQL can be downloaded from https://dev.mysql.com/downloads/mysql/
 
 Execute the SQL file attached with the repository , the file is db.sql
 
