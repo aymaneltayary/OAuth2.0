@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -22,13 +23,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
-	
+
+
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 		return encoder;
 
 	}
+	
 	@Autowired
     private UserDetailsService userDetailsService;
 	
@@ -36,7 +39,17 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
 	PasswordEncoder passwordEncoder;
 	
 	
-	/*
+
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+		//auth.inMemoryAuthentication().withUser("usr").password("{noop}pass").roles("hamada");
+		//auth.authenticationProvider(authenticationProvider());
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
+	}
+	
+	
+	/* OR
 	@Bean
     public DaoAuthenticationProvider authenticationProvider(){ 
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -45,13 +58,6 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
         return provider;
     }
 	*/
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-		//auth.inMemoryAuthentication().withUser("usr").password("{noop}pass").roles("hamada");
-		//auth.authenticationProvider(authenticationProvider());
-		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
-	}
 
 	// CORS settings
 	 @Override
@@ -59,16 +65,21 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
        web.ignoring()
          .antMatchers(HttpMethod.OPTIONS)
          // enable actuator endpoints
-         .antMatchers("/actuator/**");
+         .antMatchers("/actuator/**")
+         .antMatchers("/.well-known/jwks.json")
+        // .antMatchers("/oauth/authorize")
+         ;
      }
 	
 	
+	
+	 
 	
 	/**
 	 * This bean is required for AuthConfig to make the call authenticated first It
 	 * is used by AuthConfig otherwise unsupported grant type will be returned
 	 */
-
+	 
 	@Bean
 	public AuthenticationManager authenticationManagerBean() throws Exception {
 		return super.authenticationManagerBean();
